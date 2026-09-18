@@ -490,7 +490,7 @@ section {
   font-size: 12px;
 }
 
-/* RESPONSE / SELECTION */
+/* RESPONSE FORM */
 
 .response-section {
   text-align: center;
@@ -508,9 +508,36 @@ section {
   color: var(--muted);
 }
 
-.selection-options {
+.response-form {
   max-width: 760px;
   margin: 0 auto;
+}
+
+.name-field {
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.name-field label,
+.question-box label {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.name-field input,
+.question-box textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid var(--border);
+  background: white;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.selection-options {
   display: grid;
   gap: 12px;
 }
@@ -554,26 +581,11 @@ section {
 }
 
 .question-box {
-  max-width: 760px;
-  margin: 26px auto 0;
+  margin-top: 26px;
   text-align: left;
 }
 
-.question-box label {
-  display: block;
-  margin-bottom: 7px;
-  color: var(--navy);
-  font-weight: 700;
-}
-
 .question-box textarea {
-  width: 100%;
-  padding: 14px;
-  border: 1px solid var(--border);
-  background: white;
-  color: var(--text);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
   resize: vertical;
 }
 
@@ -1158,73 +1170,115 @@ footer a {
   </h2>
 
   <p class="response-intro">
-    Choose the fare you would like me to confirm.
+    Enter your name and choose the fare you would like me to confirm.
     If you have any questions before deciding, you can include them below.
   </p>
 
-  <div class="selection-options">
+  <form
+    class="response-form"
+    action="https://submit-form.com/NkK6KqEND"
+    method="POST">
 
-    <label class="selection-card">
+    <input
+      type="hidden"
+      name="trip"
+      value="Alaska Denali Explorer">
+
+    <input
+      type="hidden"
+      name="ship"
+      value="Island Princess">
+
+    <input
+      type="hidden"
+      name="travel_dates"
+      value="August 18-30, 2027">
+
+    <input
+      type="hidden"
+      name="_email.subject"
+      value="New Proposal Response - Alaska Denali Explorer">
+
+    <div class="name-field">
+      <label for="client-name">
+        Your Name
+      </label>
+
       <input
-        type="radio"
-        name="selection"
-        value="Princess Standard - $4,704">
-
-      <span class="selection-content">
-        <strong>Princess Standard</strong>
-        <span>$4,704 total for two travelers</span>
-      </span>
-    </label>
+        type="text"
+        id="client-name"
+        name="client_name"
+        placeholder="Enter your name"
+        required>
+    </div>
 
 
-    <label class="selection-card">
-      <input
-        type="radio"
-        name="selection"
-        value="Princess Plus - $5,614">
+    <div class="selection-options">
 
-      <span class="selection-content">
-        <strong>Princess Plus</strong>
-        <span>$5,614 total for two travelers</span>
-      </span>
-    </label>
+      <label class="selection-card">
+        <input
+          type="radio"
+          name="selection"
+          value="Princess Standard - $4,704"
+          required>
 
-
-    <label class="selection-card">
-      <input
-        type="radio"
-        name="selection"
-        value="Princess Premier - $6,084">
-
-      <span class="selection-content">
-        <strong>Princess Premier</strong>
-        <span>$6,084 total for two travelers</span>
-      </span>
-    </label>
-
-  </div>
+        <span class="selection-content">
+          <strong>Princess Standard</strong>
+          <span>$4,704 total for two travelers</span>
+        </span>
+      </label>
 
 
-  <div class="question-box">
+      <label class="selection-card">
+        <input
+          type="radio"
+          name="selection"
+          value="Princess Plus - $5,614">
 
-    <label for="questions">
-      Questions or comments?
-    </label>
-
-    <textarea
-      id="questions"
-      name="questions"
-      rows="4"
-      placeholder="Optional"></textarea>
-
-  </div>
+        <span class="selection-content">
+          <strong>Princess Plus</strong>
+          <span>$5,614 total for two travelers</span>
+        </span>
+      </label>
 
 
-  <button
-    class="submit-button"
-    type="button">
-    SUBMIT MY SELECTION
-  </button>
+      <label class="selection-card">
+        <input
+          type="radio"
+          name="selection"
+          value="Princess Premier - $6,084">
+
+        <span class="selection-content">
+          <strong>Princess Premier</strong>
+          <span>$6,084 total for two travelers</span>
+        </span>
+      </label>
+
+    </div>
+
+
+    <div class="question-box">
+
+      <label for="questions">
+        Questions or comments?
+      </label>
+
+      <textarea
+        id="questions"
+        name="questions"
+        rows="4"
+        placeholder="Optional"></textarea>
+
+    </div>
+
+
+    <button
+      class="submit-button"
+      type="submit">
+      SUBMIT MY SELECTION
+    </button>
+
+  </form>
 
 
   <div class="disclaimer">
