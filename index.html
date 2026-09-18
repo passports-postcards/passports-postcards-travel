@@ -1,66 +1,684 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Passports & Postcards Travel Design</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f7f5f2;
-      color: #333;
-      text-align: center;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Southern Caribbean Cruise Quote | Passports & Postcards</title>
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    background: #f7f4ef;
+    color: #2f3540;
+    line-height: 1.6;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  .hero {
+    background:
+      linear-gradient(135deg, rgba(20,65,84,.96), rgba(43,119,131,.88));
+    color: white;
+    padding: 70px 24px 65px;
+    text-align: center;
+  }
+
+  .brand {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+    opacity: .95;
+  }
+
+  .hero h1 {
+    font-size: clamp(38px, 7vw, 68px);
+    line-height: 1.05;
+    margin: 0 auto 18px;
+    max-width: 900px;
+  }
+
+  .hero .subtitle {
+    font-size: 21px;
+    margin-bottom: 10px;
+  }
+
+  .hero .route {
+    font-size: 17px;
+    opacity: .92;
+  }
+
+  .container {
+    width: min(1100px, calc(100% - 34px));
+    margin: auto;
+  }
+
+  .intro-card {
+    max-width: 860px;
+    margin: -34px auto 38px;
+    background: white;
+    border-radius: 20px;
+    padding: 34px;
+    position: relative;
+    box-shadow: 0 12px 35px rgba(27,45,55,.12);
+    text-align: center;
+  }
+
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #397c84;
+  }
+
+  .intro-card h2 {
+    margin: 8px 0 12px;
+    font-size: 30px;
+  }
+
+  .intro-card p {
+    max-width: 700px;
+    margin: auto;
+    color: #626b73;
+  }
+
+  section {
+    padding: 34px 0;
+  }
+
+  .section-title {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+
+  .section-title h2 {
+    font-size: 34px;
+    margin: 0 0 8px;
+  }
+
+  .section-title p {
+    margin: 0;
+    color: #707880;
+  }
+
+  .cruise-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 28px rgba(27,45,55,.09);
+    margin-bottom: 30px;
+  }
+
+  .cruise-header {
+    background: #f0e9df;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 25px;
+    align-items: center;
+  }
+
+  .cruise-header h3 {
+    font-size: 31px;
+    margin: 0 0 5px;
+  }
+
+  .cruise-header p {
+    margin: 0;
+    color: #687079;
+  }
+
+  .price-box {
+    text-align: right;
+  }
+
+  .price-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #72777c;
+  }
+
+  .price {
+    font-size: 34px;
+    font-weight: 750;
+    color: #245e68;
+  }
+
+  .price-note {
+    font-size: 13px;
+    color: #757b80;
+  }
+
+  .cruise-body {
+    padding: 30px;
+  }
+
+  .details-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 26px;
+  }
+
+  .detail {
+    background: #faf8f5;
+    border-radius: 13px;
+    padding: 17px;
+    text-align: center;
+  }
+
+  .detail strong {
+    display: block;
+    color: #255f68;
+    margin-bottom: 4px;
+  }
+
+  .detail span {
+    font-size: 14px;
+    color: #6e7479;
+  }
+
+  .highlight {
+    border-left: 4px solid #d5a35f;
+    padding: 15px 18px;
+    background: #fffaf2;
+    margin: 22px 0;
+    border-radius: 0 10px 10px 0;
+  }
+
+  .highlight strong {
+    color: #815f2d;
+  }
+
+  .two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+  }
+
+  .info-box {
+    background: white;
+    border-radius: 18px;
+    padding: 27px;
+    box-shadow: 0 7px 22px rgba(27,45,55,.07);
+  }
+
+  .info-box h3 {
+    margin-top: 0;
+    color: #255f68;
+  }
+
+  .info-box ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+  }
+
+  .info-box li {
+    margin-bottom: 9px;
+  }
+
+  .itinerary {
+    display: grid;
+    gap: 12px;
+  }
+
+  .day {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    background: white;
+    border-radius: 14px;
+    padding: 17px 20px;
+    box-shadow: 0 4px 16px rgba(27,45,55,.05);
+  }
+
+  .day-number {
+    color: #397c84;
+    font-weight: 750;
+  }
+
+  .day strong {
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .day span {
+    color: #747b80;
+    font-size: 14px;
+  }
+
+  .payment-card {
+    background: #285f68;
+    color: white;
+    border-radius: 20px;
+    padding: 32px;
+  }
+
+  .payment-card h2 {
+    margin-top: 0;
+  }
+
+  .payment-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 16px;
+    margin-top: 22px;
+  }
+
+  .payment-item {
+    background: rgba(255,255,255,.11);
+    padding: 18px;
+    border-radius: 12px;
+  }
+
+  .payment-item span {
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    opacity: .8;
+  }
+
+  .payment-item strong {
+    font-size: 19px;
+  }
+
+  .cta {
+    text-align: center;
+    padding: 55px 25px;
+  }
+
+  .cta h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+
+  .cta p {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    color: #6c7379;
+  }
+
+  .button {
+    display: inline-block;
+    background: #285f68;
+    color: white;
+    text-decoration: none;
+    padding: 14px 25px;
+    border-radius: 30px;
+    font-weight: 650;
+  }
+
+  .disclaimer {
+    max-width: 900px;
+    margin: 25px auto 0;
+    font-size: 12px;
+    color: #7a7f83;
+    line-height: 1.6;
+  }
+
+  footer {
+    background: #202f35;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+  }
+
+  footer .footer-brand {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  footer p {
+    margin: 5px 0;
+    opacity: .8;
+    font-size: 14px;
+  }
+
+  @media (max-width: 760px) {
     .hero {
-      padding: 80px 25px;
-      background: #ffffff;
+      padding-top: 55px;
     }
 
-    h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
+    .cruise-header {
+      grid-template-columns: 1fr;
     }
 
-    h2 {
-      font-weight: normal;
-      font-size: 20px;
+    .price-box {
+      text-align: left;
     }
 
-    .card {
-      background: white;
-      max-width: 600px;
-      margin: 30px auto;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 3px 12px rgba(0,0,0,.08);
+    .details-grid {
+      grid-template-columns: 1fr 1fr;
     }
 
-    .footer {
-      margin: 40px 0;
-      font-size: 14px;
-      color: #777;
+    .two-column {
+      grid-template-columns: 1fr;
     }
-  </style>
+
+    .payment-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .day {
+      grid-template-columns: 62px 1fr;
+    }
+
+    .cruise-body,
+    .cruise-header {
+      padding: 23px;
+    }
+  }
+</style>
 </head>
 
 <body>
 
-  <div class="hero">
-    <h1>Passports & Postcards</h1>
-    <h2>Travel Design</h2>
+<header class="hero">
+  <div class="brand">Passports & Postcards Travel Design</div>
+
+  <h1>Southern Caribbean Escape</h1>
+
+  <div class="subtitle">
+    An 8-Night Caribbean Cruise Experience
   </div>
 
-  <div class="card">
-    <h2>Your Vacation Quote</h2>
-    <p>This is our first test quote page.</p>
-    <p>If you can see this page, our new travel quote website is working!</p>
+  <div class="route">
+    Fort Lauderdale • Aruba • Curaçao • Bonaire
+  </div>
+</header>
+
+
+<main>
+
+<div class="container">
+
+  <div class="intro-card">
+    <div class="eyebrow">Your Personalized Vacation Quote</div>
+
+    <h2>A Caribbean getaway worth counting down to</h2>
+
+    <p>
+      Warm turquoise water, colorful island towns and plenty of time to relax
+      aboard one of Celebrity Cruises' beautifully designed ships.
+      Below you'll find the cruise details, pricing and important information
+      for this Southern Caribbean vacation.
+    </p>
   </div>
 
-  <div class="footer">
+
+  <section>
+
+    <div class="section-title">
+      <h2>Your Cruise</h2>
+      <p>Celebrity Cruises • Southern Caribbean</p>
+    </div>
+
+    <article class="cruise-card">
+
+      <div class="cruise-header">
+
+        <div>
+          <div class="eyebrow">Celebrity Cruises</div>
+          <h3>Celebrity Silhouette</h3>
+          <p>8-Night Southern Caribbean Cruise</p>
+        </div>
+
+        <div class="price-box">
+          <div class="price-label">Sample Vacation Total</div>
+          <div class="price">$3,858.72</div>
+          <div class="price-note">for two travelers</div>
+        </div>
+
+      </div>
+
+
+      <div class="cruise-body">
+
+        <div class="details-grid">
+
+          <div class="detail">
+            <strong>8 Nights</strong>
+            <span>Southern Caribbean</span>
+          </div>
+
+          <div class="detail">
+            <strong>Fort Lauderdale</strong>
+            <span>Roundtrip Sailing</span>
+          </div>
+
+          <div class="detail">
+            <strong>Veranda</strong>
+            <span>Stateroom</span>
+          </div>
+
+          <div class="detail">
+            <strong>All Included</strong>
+            <span>Fare Option</span>
+          </div>
+
+        </div>
+
+
+        <div class="highlight">
+          <strong>Why this itinerary?</strong><br>
+          This sailing combines relaxing days at sea with three of the
+          Caribbean's most popular southern islands: Aruba, Curaçao and Bonaire.
+        </div>
+
+      </div>
+
+    </article>
+
+  </section>
+
+
+  <section>
+
+    <div class="section-title">
+      <h2>Itinerary at a Glance</h2>
+      <p>Eight nights exploring the Southern Caribbean</p>
+    </div>
+
+    <div class="itinerary">
+
+      <div class="day">
+        <div class="day-number">Day 1</div>
+        <div>
+          <strong>Fort Lauderdale, Florida</strong>
+          <span>Embark Celebrity Silhouette</span>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number">Day 2</div>
+        <div>
+          <strong>At Sea</strong>
+          <span>Relax and enjoy the ship</span>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number">Day 3</div>
+        <div>
+          <strong>At Sea</strong>
+          <span>Pool, dining, entertainment and more</span>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number">Day 4</div>
+        <div>
+          <strong>Aruba</strong>
+          <span>Beaches, colorful Oranjestad and island adventures</span>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number">Day 5</div>
+        <div>
+          <strong>Curaçao</strong>
+          <span>Explore historic Willemstad and Caribbean scenery</span>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number">Day 6</div>
+        <div>
+          <strong>Bonaire</strong>
+          <span>Crystal-clear water and a laid-back island atmosphere</span>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number">Day 7</div>
+        <div>
+          <strong>At Sea</strong>
+          <span>Another day to enjoy Celebrity Silhouette</span>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number">Day 8</div>
+        <div>
+          <strong>At Sea</strong>
+          <span>Relax before your vacation comes to an end</span>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number">Day 9</div>
+        <div>
+          <strong>Fort Lauderdale, Florida</strong>
+          <span>Disembarkation</span>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <div class="two-column">
+
+      <div class="info-box">
+
+        <h3>Included</h3>
+
+        <ul>
+          <li>8-night Celebrity Silhouette cruise</li>
+          <li>Veranda stateroom accommodations</li>
+          <li>Meals in included dining venues</li>
+          <li>Entertainment and onboard activities</li>
+          <li>Classic beverage package with All Included fare</li>
+          <li>Wi-Fi package with All Included fare</li>
+          <li>Taxes and port expenses included in quoted cruise price</li>
+        </ul>
+
+      </div>
+
+
+      <div class="info-box">
+
+        <h3>Not Included</h3>
+
+        <ul>
+          <li>Airfare</li>
+          <li>Pre- or post-cruise hotel accommodations</li>
+          <li>Transportation and transfers unless specified</li>
+          <li>Vacation protection / travel insurance</li>
+          <li>Optional shore excursions</li>
+          <li>Specialty dining and premium beverages</li>
+          <li>Personal expenses</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <div class="payment-card">
+
+      <h2>Pricing & Payment</h2>
+
+      <p>
+        Cruise pricing is based on current availability and is subject to
+        change until a reservation and required deposit are confirmed.
+      </p>
+
+      <div class="payment-grid">
+
+        <div class="payment-item">
+          <span>Vacation Total</span>
+          <strong>$3,858.72</strong>
+        </div>
+
+        <div class="payment-item">
+          <span>Travelers</span>
+          <strong>2 Guests</strong>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="cta">
+
+    <div class="eyebrow">Next Step</div>
+
+    <h2>Ready to start packing?</h2>
+
+    <p>
+      When you're ready to move forward, contact Passports & Postcards Travel
+      Design so availability and current pricing can be confirmed before booking.
+    </p>
+
+    <a class="button" href="#">
+      I'm Ready to Travel
+    </a>
+
+    <div class="disclaimer">
+      This proposal is provided for planning purposes only and does not constitute
+      a confirmed reservation. Pricing, promotions, cabin availability, taxes,
+      fees and supplier terms are subject to change without notice until booked.
+      Travel documents, entry requirements and insurance are the responsibility
+      of the traveler unless otherwise stated.
+    </div>
+
+  </section>
+
+</div>
+
+</main>
+
+
+<footer>
+
+  <div class="footer-brand">
     Passports & Postcards Travel Design
   </div>
+
+  <p>Thoughtfully planned. Beautifully traveled.</p>
+
+</footer>
 
 </body>
 </html>
