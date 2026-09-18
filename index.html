@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,12 @@
 <title>Alaska Denali Explorer | Passports & Postcards Travel Design</title>
 
 <style>
+
 :root {
   --navy: #173760;
   --navy-dark: #102a4a;
   --gold: #c99a3d;
-  --gold-light: #e4c582;
+  --gold-light: #e6c87d;
   --cream: #f8f5ef;
   --cream-dark: #efe9df;
   --white: #ffffff;
@@ -49,85 +51,87 @@ h3 {
   margin: auto;
 }
 
-/* BRAND HEADER */
 
-.brand-header {
-  background: rgba(255,255,255,.97);
-  padding: 16px 25px;
-  text-align: center;
-  border-bottom: 1px solid #eee9df;
+/* =========================
+   QUOTE HEADER
+========================= */
+
+.quote-header {
+  background: var(--navy);
+  color: white;
+  padding: 46px 0;
 }
 
-.brand-header img {
-  width: min(280px, 74vw);
+.quote-header-inner {
+  display: grid;
+  grid-template-columns: 330px 1px 1fr;
+  gap: 45px;
+  align-items: center;
+}
+
+.quote-logo-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.quote-logo {
+  width: 300px;
+  max-width: 100%;
   height: auto;
   display: block;
-  margin: auto;
+  border-radius: 4px;
 }
 
-/* HERO */
-
-.hero {
-  min-height: 530px;
-
-  background-image:
-    linear-gradient(
-      rgba(14,35,61,.28),
-      rgba(14,35,61,.55)
-    ),
-    url("hero.jpg");
-
-  background-size: cover;
-  background-position: center;
-  background-color: var(--navy);
-
-  display: flex;
-  align-items: flex-end;
-  color: white;
+.header-divider {
+  width: 1px;
+  height: 235px;
+  background: var(--gold);
 }
 
-.hero-content {
-  width: 100%;
-  padding: 85px 25px 60px;
+.quote-title {
   text-align: center;
+  padding: 12px 10px;
 }
 
-.hero-label {
+.quote-label {
   text-transform: uppercase;
   letter-spacing: 3px;
   font-size: 12px;
   font-weight: 700;
+  color: var(--gold-light);
   margin-bottom: 12px;
-  color: #f7e3af;
 }
 
-.hero h1 {
+.quote-title h1 {
   color: white;
-  font-size: clamp(44px, 7vw, 72px);
-  line-height: 1.03;
-  margin: 0 0 13px;
-  text-shadow: 0 2px 15px rgba(0,0,0,.25);
+  font-size: clamp(42px, 5vw, 66px);
+  line-height: 1.05;
+  margin: 0 0 15px;
 }
 
-.hero h2 {
+.quote-title h2 {
   color: white;
-  margin: 0 0 8px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 22px;
+  font-size: 23px;
   font-weight: 400;
+  margin: 0 0 8px;
 }
 
-.hero p {
+.quote-title p {
+  color: white;
   margin: 0;
   font-size: 17px;
 }
 
-/* INTRO */
+
+/* =========================
+   INTRO
+========================= */
 
 .intro {
   max-width: 880px;
   background: white;
-  margin: -42px auto 45px;
+  margin: -25px auto 45px;
   padding: 38px;
   position: relative;
   border-radius: 6px;
@@ -154,7 +158,10 @@ h3 {
   color: var(--muted);
 }
 
-/* SECTIONS */
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
 
 section {
   padding: 38px 0;
@@ -175,7 +182,10 @@ section {
   color: var(--muted);
 }
 
-/* OVERVIEW */
+
+/* =========================
+   OVERVIEW
+========================= */
 
 .trip-overview {
   display: grid;
@@ -203,7 +213,10 @@ section {
   font-size: 13px;
 }
 
-/* ROUTE */
+
+/* =========================
+   ROUTE
+========================= */
 
 .route-card {
   background: var(--navy);
@@ -230,7 +243,10 @@ section {
   max-width: 800px;
 }
 
-/* CRUISE + LAND */
+
+/* =========================
+   CRUISE + LAND
+========================= */
 
 .two-column {
   display: grid;
@@ -264,7 +280,10 @@ section {
   margin-bottom: 8px;
 }
 
-/* FARES */
+
+/* =========================
+   FARE COMPARISON
+========================= */
 
 .fare-grid {
   display: grid;
@@ -366,7 +385,10 @@ section {
   font-size: 14px;
 }
 
-/* VALUE BREAKDOWN */
+
+/* =========================
+   VALUE BREAKDOWNS
+========================= */
 
 .value-box {
   margin-top: 22px;
@@ -408,8 +430,6 @@ section {
   color: var(--navy);
 }
 
-/* PREMIER EXTRAS */
-
 .premier-extra {
   margin-top: 20px;
   padding: 16px;
@@ -422,7 +442,10 @@ section {
   color: var(--navy);
 }
 
-/* NOT INCLUDED */
+
+/* =========================
+   NOT INCLUDED
+========================= */
 
 .not-included {
   background: white;
@@ -444,7 +467,10 @@ section {
   margin-bottom: 7px;
 }
 
-/* PAYMENT */
+
+/* =========================
+   PAYMENT
+========================= */
 
 .payment {
   background: var(--navy);
@@ -489,11 +515,14 @@ section {
   font-size: 19px;
 }
 
-/* CTA */
+
+/* =========================
+   CTA
+========================= */
 
 .cta {
   text-align: center;
-  padding: 65px 20px;
+  padding: 60px 20px;
 }
 
 .cta h2 {
@@ -532,30 +561,93 @@ section {
   line-height: 1.7;
 }
 
-/* FOOTER */
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
   background: #f0ece4;
   border-top: 1px solid var(--border);
-  text-align: center;
-  padding: 38px 20px;
 }
 
-footer img {
-  width: 190px;
-  max-width: 60vw;
+.footer-inner {
+  width: min(1160px, calc(100% - 36px));
+  margin: auto;
+  padding: 42px 0;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 50px;
+  align-items: center;
 }
 
-footer p {
-  margin: 10px 0 0;
-  color: var(--muted);
+.footer-brand {
+  text-align: left;
+}
+
+.footer-brand img {
+  width: 225px;
+  max-width: 70vw;
+  height: auto;
+}
+
+.footer-tagline {
+  margin-top: 10px;
   font-family: Georgia, "Times New Roman", serif;
   font-style: italic;
+  color: var(--gold);
+  font-size: 18px;
 }
 
-/* MOBILE */
+.footer-contact {
+  border-left: 1px solid var(--gold);
+  padding-left: 35px;
+}
+
+.footer-contact h3 {
+  margin: 0 0 10px;
+  font-size: 23px;
+}
+
+.footer-contact p {
+  margin: 4px 0;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.footer-contact a {
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media (max-width: 900px) {
+
+  .quote-header-inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .header-divider {
+    display: none;
+  }
+
+  .quote-logo {
+    width: 300px;
+  }
+
+  .quote-title {
+    padding-top: 5px;
+  }
+
   .fare-grid {
     grid-template-columns: 1fr;
   }
@@ -567,9 +659,27 @@ footer p {
   .fare-description {
     min-height: 0;
   }
+
 }
 
 @media (max-width: 720px) {
+
+  .quote-header {
+    padding: 30px 0 48px;
+  }
+
+  .quote-logo {
+    width: 270px;
+  }
+
+  .quote-title h1 {
+    font-size: 48px;
+  }
+
+  .quote-title h2 {
+    font-size: 20px;
+  }
+
   .trip-overview {
     grid-template-columns: 1fr 1fr;
   }
@@ -583,18 +693,28 @@ footer p {
     columns: 1;
   }
 
-  .hero {
-    min-height: 440px;
-  }
-
-  .hero-content {
-    padding-bottom: 55px;
-  }
-
   .intro {
     padding: 29px 22px;
   }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-brand {
+    text-align: center;
+  }
+
+  .footer-contact {
+    border-left: none;
+    border-top: 1px solid var(--gold);
+    padding-left: 0;
+    padding-top: 25px;
+  }
+
 }
+
 </style>
 </head>
 
@@ -602,40 +722,51 @@ footer p {
 <body>
 
 
-<!-- BRAND HEADER -->
+<!-- =========================
+     BRANDED QUOTE HEADER
+========================= -->
 
-<header class="brand-header">
-  <img
-    src="pp-logo.png"
-    alt="Passports & Postcards Travel Design">
-</header>
+<header class="quote-header">
 
+  <div class="container quote-header-inner">
 
-<!-- HERO -->
+    <div class="quote-logo-wrap">
 
-<section class="hero">
+      <img
+        class="quote-logo"
+        src="pp-logo-white.png"
+        alt="Passports & Postcards Travel Design">
 
-  <div class="hero-content">
-
-    <div class="hero-label">
-      Your Personalized Cruise Quote
     </div>
 
-    <h1>
-      Alaska Denali Explorer
-    </h1>
 
-    <h2>
-      12-Day Princess CruiseTour
-    </h2>
+    <div class="header-divider"></div>
 
-    <p>
-      Island Princess &nbsp;•&nbsp; August 18–30, 2027
-    </p>
+
+    <div class="quote-title">
+
+      <div class="quote-label">
+        Your Personalized Cruise Quote
+      </div>
+
+      <h1>
+        Alaska Denali Explorer
+      </h1>
+
+      <h2>
+        12-Day Princess CruiseTour
+      </h2>
+
+      <p>
+        Island Princess &nbsp;•&nbsp; August 18–30, 2027
+      </p>
+
+    </div>
 
   </div>
 
-</section>
+</header>
+
 
 
 <main>
@@ -643,7 +774,9 @@ footer p {
 <div class="container">
 
 
-<!-- INTRO -->
+<!-- =========================
+     INTRO
+========================= -->
 
 <div class="intro">
 
@@ -664,7 +797,10 @@ footer p {
 </div>
 
 
-<!-- OVERVIEW -->
+
+<!-- =========================
+     OVERVIEW
+========================= -->
 
 <section>
 
@@ -706,7 +842,10 @@ footer p {
 </section>
 
 
-<!-- ROUTE -->
+
+<!-- =========================
+     ROUTE
+========================= -->
 
 <section>
 
@@ -734,7 +873,10 @@ footer p {
 </section>
 
 
-<!-- CRUISE + LAND -->
+
+<!-- =========================
+     CRUISE + LAND
+========================= -->
 
 <section>
 
@@ -808,7 +950,10 @@ footer p {
 </section>
 
 
-<!-- FARE COMPARISON -->
+
+<!-- =========================
+     FARE COMPARISON
+========================= -->
 
 <section>
 
@@ -967,7 +1112,7 @@ footer p {
             <strong>$158.24</strong>
             of the upgrade to be offset by specialty coffees,
             bottled water, energy drinks, mocktails,
-            alcoholic beverages and any room-service delivery
+            alcoholic beverages and room-service delivery
             that would otherwise be purchased separately.
 
           </div>
@@ -1085,13 +1230,15 @@ footer p {
 
     </article>
 
-
   </div>
 
 </section>
 
 
-<!-- NOT INCLUDED -->
+
+<!-- =========================
+     NOT INCLUDED
+========================= -->
 
 <section>
 
@@ -1116,7 +1263,10 @@ footer p {
 </section>
 
 
-<!-- PAYMENT -->
+
+<!-- =========================
+     PAYMENT
+========================= -->
 
 <section>
 
@@ -1136,9 +1286,7 @@ footer p {
 
       <div class="payment-item">
 
-        <span>
-          Deposit
-        </span>
+        <span>Deposit</span>
 
         <strong>
           $250
@@ -1149,9 +1297,7 @@ footer p {
 
       <div class="payment-item">
 
-        <span>
-          Final Payment
-        </span>
+        <span>Final Payment</span>
 
         <strong>
           April 20, 2027
@@ -1162,9 +1308,7 @@ footer p {
 
       <div class="payment-item">
 
-        <span>
-          Travel Dates
-        </span>
+        <span>Travel Dates</span>
 
         <strong>
           Aug. 18–30, 2027
@@ -1179,7 +1323,10 @@ footer p {
 </section>
 
 
-<!-- CTA -->
+
+<!-- =========================
+     CTA
+========================= -->
 
 <section class="cta">
 
@@ -1220,20 +1367,59 @@ footer p {
 </main>
 
 
-<!-- FOOTER -->
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
-  <img
-    src="pp-logo.png"
-    alt="Passports & Postcards Travel Design">
+  <div class="footer-inner">
 
-  <p>
-    Custom journeys. Thoughtful planning. Unforgettable memories.
-  </p>
+    <div class="footer-brand">
+
+      <img
+        src="pp-logo-transparent.png"
+        alt="Passports & Postcards Travel Design">
+
+      <div class="footer-tagline">
+        Turning plans into postcards.
+      </div>
+
+    </div>
+
+
+    <div class="footer-contact">
+
+      <h3>
+        Passports & Postcards Travel Design
+      </h3>
+
+      <p>
+        YOUR NAME • Travel Advisor
+      </p>
+
+      <p>
+        YOUR CLIENT-FACING EMAIL
+      </p>
+
+      <p>
+        YOUR CLIENT-FACING PHONE
+      </p>
+
+      <p>
+        <a href="https://postcardstraveldesign.com">
+          postcardstraveldesign.com
+        </a>
+      </p>
+
+    </div>
+
+  </div>
 
 </footer>
 
 
 </body>
+
 </html>
