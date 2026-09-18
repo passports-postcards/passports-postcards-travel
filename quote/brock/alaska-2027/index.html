@@ -1,1307 +1,1224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Alaska Denali Explorer | Passports & Postcards Travel Design</title>
-
-<style>
-:root {
-  --navy: #173760;
-  --navy-dark: #102a4a;
-  --gold: #c99a3d;
-  --gold-light: #e6c87d;
-  --cream: #f8f5ef;
-  --white: #ffffff;
-  --text: #263548;
-  --muted: #6f7782;
-  --border: #ded8cd;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  background: var(--cream);
-  color: var(--text);
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
-}
-
-h1,
-h2,
-h3 {
-  font-family: Georgia, "Times New Roman", serif;
-  color: var(--navy);
-  font-weight: 500;
-}
-
-.container {
-  width: min(1160px, calc(100% - 36px));
-  margin: auto;
-}
-
-/* HEADER */
-
-.quote-header {
-  background: var(--navy);
-  color: white;
-  padding: 44px 0;
-}
-
-.quote-header-inner {
-  display: grid;
-  grid-template-columns: 330px 1px 1fr;
-  gap: 42px;
-  align-items: center;
-}
-
-.quote-logo-wrap {
-  text-align: center;
-}
-
-.quote-logo {
-  width: 290px;
-  max-width: 100%;
-  display: block;
-  margin: auto;
-  border-radius: 4px;
-}
-
-.advisor-info {
-  margin-top: 16px;
-  color: white;
-  font-size: 13px;
-  line-height: 1.55;
-}
-
-.advisor-info strong {
-  display: block;
-  color: var(--gold-light);
-  font-size: 15px;
-}
-
-.advisor-info a {
-  color: white;
-  text-decoration: none;
-}
-
-.header-divider {
-  width: 1px;
-  height: 275px;
-  background: var(--gold);
-}
-
-.quote-title {
-  text-align: center;
-  padding: 10px;
-}
-
-.quote-label {
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--gold-light);
-  margin-bottom: 12px;
-}
-
-.quote-title h1 {
-  color: white;
-  font-size: clamp(42px, 5vw, 66px);
-  line-height: 1.05;
-  margin: 0 0 15px;
-}
-
-.quote-title h2 {
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 23px;
-  font-weight: 400;
-  margin: 0 0 8px;
-}
-
-.quote-title p {
-  margin: 0;
-  font-size: 17px;
-}
-
-/* INTRO */
-
-.intro {
-  max-width: 880px;
-  background: white;
-  margin: -25px auto 45px;
-  padding: 38px;
-  position: relative;
-  border-radius: 6px;
-  box-shadow: 0 13px 36px rgba(21,45,70,.12);
-  text-align: center;
-}
-
-.eyebrow {
-  color: var(--gold);
-  text-transform: uppercase;
-  letter-spacing: 2.5px;
-  font-size: 11px;
-  font-weight: 700;
-}
-
-.intro h2 {
-  margin: 8px 0 10px;
-  font-size: 34px;
-}
-
-.intro p {
-  margin: auto;
-  max-width: 700px;
-  color: var(--muted);
-}
-
-/* SECTIONS */
-
-section {
-  padding: 38px 0;
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.section-title h2 {
-  font-size: 38px;
-  margin: 0 0 7px;
-}
-
-.section-title p {
-  margin: 0;
-  color: var(--muted);
-}
-
-/* OVERVIEW */
-
-.trip-overview {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
-}
-
-.overview-box {
-  background: white;
-  text-align: center;
-  border: 1px solid var(--border);
-  padding: 24px 15px;
-}
-
-.overview-box strong {
-  color: var(--navy);
-  display: block;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 20px;
-  margin-bottom: 3px;
-}
-
-.overview-box span {
-  color: var(--muted);
-  font-size: 13px;
-}
-
-/* ROUTE */
-
-.route-card {
-  background: var(--navy);
-  color: white;
-  padding: 34px;
-  text-align: center;
-  border-radius: 5px;
-}
-
-.route-card .eyebrow {
-  color: var(--gold-light);
-}
-
-.route-line {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 22px;
-  margin: 10px auto;
-  max-width: 950px;
-}
-
-.route-card p {
-  color: rgba(255,255,255,.78);
-  margin: 10px auto 0;
-  max-width: 800px;
-}
-
-/* CRUISE + LAND */
-
-.two-column {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-}
-
-.trip-card {
-  background: white;
-  border: 1px solid var(--border);
-  padding: 30px;
-}
-
-.trip-card h3 {
-  font-size: 27px;
-  margin: 4px 0 3px;
-}
-
-.trip-card .subhead {
-  color: var(--gold);
-  font-weight: 700;
-  margin-bottom: 18px;
-}
-
-.trip-card ul {
-  padding-left: 20px;
-  margin-bottom: 0;
-}
-
-.trip-card li {
-  margin-bottom: 8px;
-}
-
-/* FARES */
-
-.fare-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  align-items: stretch;
-}
-
-.fare-card {
-  background: white;
-  border: 1px solid var(--border);
-  display: flex;
-  flex-direction: column;
-}
-
-.fare-card.plus {
-  border: 2px solid var(--gold);
-}
-
-.fare-card.premier {
-  border: 2px solid var(--navy);
-}
-
-.fare-top {
-  padding: 27px 23px;
-  background: #f3f0ea;
-}
-
-.plus .fare-top {
-  background: #f7eedb;
-}
-
-.premier .fare-top {
-  background: var(--navy);
-  color: white;
-}
-
-.fare-name {
-  font-family: Georgia, "Times New Roman", serif;
-  color: var(--navy);
-  font-size: 27px;
-}
-
-.premier .fare-name,
-.premier .price {
-  color: white;
-}
-
-.fare-description {
-  color: var(--muted);
-  font-size: 13px;
-  min-height: 42px;
-}
-
-.premier .fare-description,
-.premier .price-note {
-  color: rgba(255,255,255,.76);
-}
-
-.price {
-  font-family: Georgia, "Times New Roman", serif;
-  color: var(--navy);
-  font-size: 40px;
-  margin-top: 15px;
-  line-height: 1;
-}
-
-.price-note {
-  font-size: 12px;
-  color: var(--muted);
-  margin-top: 5px;
-}
-
-.fare-body {
-  padding: 25px 23px 28px;
-  flex: 1;
-}
-
-.fare-body h4 {
-  margin: 0 0 13px;
-  color: var(--navy);
-}
-
-.fare-body ul {
-  padding-left: 18px;
-  margin: 0;
-}
-
-.fare-body li {
-  margin-bottom: 8px;
-  font-size: 14px;
-}
-
-/* VALUE BREAKDOWNS */
-
-.value-box {
-  margin-top: 22px;
-  border-top: 1px solid var(--border);
-  padding-top: 18px;
-}
-
-.value-heading {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 20px;
-  color: var(--navy);
-  margin-bottom: 12px;
-}
-
-.value-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
-  border-bottom: 1px solid #eee9df;
-  padding: 8px 0;
-  font-size: 13px;
-}
-
-.value-row span:last-child {
-  text-align: right;
-  font-weight: 700;
-  color: var(--navy);
-}
-
-.value-summary {
-  background: var(--cream);
-  margin-top: 17px;
-  padding: 14px;
-  font-size: 13px;
-  border-left: 3px solid var(--gold);
-}
-
-.value-summary strong {
-  color: var(--navy);
-}
-
-.premier-extra {
-  margin-top: 20px;
-  padding: 16px;
-  background: #eef1f4;
-  border-left: 3px solid var(--navy);
-  font-size: 13px;
-}
-
-.premier-extra strong {
-  color: var(--navy);
-}
-
-/* NOT INCLUDED */
-
-.not-included {
-  background: white;
-  border: 1px solid var(--border);
-  padding: 30px;
-}
-
-.not-included h3 {
-  margin-top: 0;
-  font-size: 26px;
-}
-
-.not-included ul {
-  columns: 2;
-  padding-left: 20px;
-}
-
-/* PAYMENT */
-
-.payment {
-  background: var(--navy);
-  color: white;
-  padding: 35px;
-  border-radius: 5px;
-}
-
-.payment h2 {
-  color: white;
-  margin: 0 0 8px;
-  font-size: 34px;
-}
-
-.payment p {
-  color: rgba(255,255,255,.8);
-}
-
-.payment-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-  margin-top: 24px;
-}
-
-.payment-item {
-  border: 1px solid rgba(255,255,255,.25);
-  padding: 19px;
-}
-
-.payment-item span {
-  display: block;
-  color: var(--gold-light);
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  font-size: 10px;
-  margin-bottom: 4px;
-}
-
-.payment-item strong {
-  display: block;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 19px;
-}
-
-.payment-note {
-  display: block;
-  margin-top: 4px;
-  color: rgba(255,255,255,.78);
-  font-size: 12px;
-}
-
-/* RESPONSE FORM */
-
-.response-section {
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.response-section h2 {
-  margin: 7px 0 10px;
-  font-size: 40px;
-}
-
-.response-intro {
-  max-width: 700px;
-  margin: 0 auto 28px;
-  color: var(--muted);
-}
-
-.response-form {
-  max-width: 760px;
-  margin: 0 auto;
-}
-
-.name-field {
-  text-align: left;
-  margin-bottom: 24px;
-}
-
-.name-field label,
-.question-box label {
-  display: block;
-  margin-bottom: 7px;
-  color: var(--navy);
-  font-weight: 700;
-}
-
-.name-field input,
-.question-box textarea {
-  width: 100%;
-  padding: 14px;
-  border: 1px solid var(--border);
-  background: white;
-  color: var(--text);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
-}
-
-.selection-options {
-  display: grid;
-  gap: 12px;
-}
-
-.selection-card {
-  background: white;
-  border: 1px solid var(--border);
-  padding: 18px 20px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  text-align: left;
-  cursor: pointer;
-  transition: .2s ease;
-}
-
-.selection-card:hover {
-  border-color: var(--gold);
-}
-
-.selection-card input {
-  width: 18px;
-  height: 18px;
-  accent-color: var(--navy);
-}
-
-.selection-content {
-  display: flex;
-  flex-direction: column;
-}
-
-.selection-content strong {
-  color: var(--navy);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 18px;
-}
-
-.selection-content span {
-  color: var(--muted);
-  font-size: 13px;
-}
-
-.question-box {
-  margin-top: 26px;
-  text-align: left;
-}
-
-.question-box textarea {
-  resize: vertical;
-}
-
-.submit-button {
-  margin-top: 24px;
-  background: var(--navy);
-  color: white;
-  border: none;
-  padding: 14px 30px;
-  font-size: 13px;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.submit-button:hover {
-  background: var(--navy-dark);
-}
-
-.disclaimer {
-  max-width: 900px;
-  margin: 32px auto 0;
-  color: #838991;
-  font-size: 11px;
-  line-height: 1.7;
-}
-
-/* FOOTER */
-
-footer {
-  background: #f0ece4;
-  border-top: 1px solid var(--border);
-  text-align: center;
-  padding: 28px 20px;
-}
-
-.footer-tagline {
-  color: var(--gold);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 19px;
-  font-style: italic;
-  margin-bottom: 4px;
-}
-
-footer a {
-  color: var(--navy);
-  text-decoration: none;
-  font-size: 14px;
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 900px) {
-  .quote-header-inner {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .header-divider {
-    display: none;
-  }
-
-  .quote-logo {
-    width: 290px;
-  }
-
-  .fare-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 720px) {
-  .quote-header {
-    padding: 28px 0 46px;
-  }
-
-  .quote-title h1 {
-    font-size: 46px;
-  }
-
-  .trip-overview {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .two-column,
-  .payment-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .not-included ul {
-    columns: 1;
-  }
-
-  .intro {
-    padding: 29px 22px;
-  }
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alaska Denali Explorer | Passports & Postcards Travel Design</title>
+
+  <style>
+    :root {
+      --navy: #173760;
+      --navy-dark: #102a4a;
+      --gold: #c99a3d;
+      --gold-light: #e6c87d;
+      --cream: #f8f5ef;
+      --white: #ffffff;
+      --text: #263548;
+      --muted: #6f7782;
+      --border: #ded8cd;
+      --card-shadow: 0 10px 30px rgba(23, 55, 96, 0.08);
+      --radius-lg: 18px;
+      --radius-md: 14px;
+      --radius-sm: 10px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--navy);
+      margin-top: 0;
+    }
+
+    p {
+      margin-top: 0;
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 36px));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 44px 0;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 12px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    /* HEADER */
+    .quote-header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 44px 0;
+    }
+
+    .quote-header-inner {
+      display: grid;
+      grid-template-columns: 280px 1px 1fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .quote-logo-wrap {
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .quote-logo {
+      max-width: 240px;
+      width: 100%;
+      border-radius: 6px;
+    }
+
+    .header-divider {
+      width: 1px;
+      height: 100%;
+      min-height: 220px;
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    .header-copy {
+      color: var(--white);
+    }
+
+    .header-copy .eyebrow {
+      color: var(--gold-light);
+    }
+
+    .header-copy h1 {
+      color: var(--white);
+      font-size: clamp(2.2rem, 4vw, 4rem);
+      line-height: 1.05;
+      margin-bottom: 16px;
+    }
+
+    .trip-subtitle {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .trip-meta {
+      font-size: 1.18rem;
+      margin-bottom: 22px;
+      color: rgba(255, 255, 255, 0.92);
+    }
+
+    .advisor-chip {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 14px;
+      padding: 16px 18px;
+      color: rgba(255, 255, 255, 0.96);
+      font-size: 0.97rem;
+      line-height: 1.7;
+    }
+
+    .advisor-chip strong {
+      color: #ffffff;
+    }
+
+    /* INTRO CARD */
+    .intro-card {
+      margin-top: -24px;
+    }
+
+    .intro-card-inner {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--card-shadow);
+      padding: 34px 36px;
+      text-align: center;
+    }
+
+    .intro-card-inner h2 {
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      margin-bottom: 12px;
+    }
+
+    .intro-card-inner p {
+      max-width: 800px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1.06rem;
+    }
+
+    /* OVERVIEW */
+    .overview-heading {
+      margin-bottom: 20px;
+    }
+
+    .overview-heading h2 {
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
+    .overview-heading p {
+      text-align: center;
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .overview-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 22px 18px;
+      text-align: center;
+      box-shadow: var(--card-shadow);
+    }
+
+    .overview-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 4px;
+    }
+
+    .overview-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    /* JOURNEY */
+    .journey-banner {
+      margin-top: 28px;
+      background: linear-gradient(135deg, var(--navy) 0%, #23529a 100%);
+      color: white;
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      text-align: center;
+      box-shadow: var(--card-shadow);
+    }
+
+    .journey-banner .eyebrow {
+      color: var(--gold-light);
+    }
+
+    .journey-route {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.15rem, 2.2vw, 1.75rem);
+      font-weight: 700;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .journey-banner p:last-child {
+      margin-bottom: 0;
+      color: rgba(255, 255, 255, 0.92);
+    }
+
+    /* DESTINATION GALLERY */
+    .gallery-section h2 {
+      text-align: center;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      margin-bottom: 10px;
+    }
+
+    .gallery-section .section-subtitle {
+      text-align: center;
+      color: var(--muted);
+      max-width: 820px;
+      margin: 0 auto 28px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .gallery-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--card-shadow);
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 235px;
+      object-fit: cover;
+    }
+
+    .gallery-card-body {
+      padding: 18px 18px 20px;
+    }
+
+    .gallery-card-body h3 {
+      font-size: 1.45rem;
+      margin-bottom: 6px;
+    }
+
+    .gallery-card-body p {
+      color: var(--muted);
+      margin: 0;
+      font-size: 0.97rem;
+    }
+
+    /* TWO ADVENTURES */
+    .split-overview {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      margin-top: 24px;
+    }
+
+    .split-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .split-card .eyebrow {
+      margin-bottom: 10px;
+    }
+
+    .split-card h3 {
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    .split-card .route-line {
+      color: var(--gold);
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .split-card ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .split-card li {
+      margin-bottom: 10px;
+    }
+
+    /* PRICING CARDS */
+    .pricing-heading {
+      margin-bottom: 24px;
+    }
+
+    .pricing-heading h2 {
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
+    .pricing-heading p {
+      color: var(--muted);
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    .fare-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-bottom: 26px;
+    }
+
+    .fare-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 26px;
+      box-shadow: var(--card-shadow);
+      position: relative;
+    }
+
+    .fare-card.featured {
+      border: 2px solid var(--gold);
+    }
+
+    .fare-card.premier {
+      background: linear-gradient(135deg, var(--navy) 0%, #215092 100%);
+      color: var(--white);
+      border-color: transparent;
+    }
+
+    .fare-card h3 {
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    .fare-card.premier h3,
+    .fare-card.premier p,
+    .fare-card.premier .fare-price,
+    .fare-card.premier li,
+    .fare-card.premier .small-note {
+      color: var(--white);
+    }
+
+    .fare-desc {
+      color: var(--muted);
+      min-height: 48px;
+    }
+
+    .fare-price {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 3rem;
+      font-weight: 700;
+      margin: 18px 0 0;
+      color: var(--navy);
+    }
+
+    .fare-details-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .detail-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .detail-card h3 {
+      font-size: 1.65rem;
+      margin-bottom: 14px;
+    }
+
+    .detail-card ul {
+      margin: 0 0 18px;
+      padding-left: 20px;
+    }
+
+    .detail-card li {
+      margin-bottom: 10px;
+    }
+
+    .value-list {
+      margin-top: 18px;
+      border-top: 1px solid var(--border);
+      padding-top: 18px;
+    }
+
+    .value-list h4 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      color: var(--navy);
+    }
+
+    .value-line {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      font-size: 0.96rem;
+      margin-bottom: 8px;
+    }
+
+    .small-note {
+      margin-top: 16px;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    /* NOT INCLUDED */
+    .not-included-box {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .not-included-box h2 {
+      font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+      margin-bottom: 18px;
+    }
+
+    .not-included-list {
+      columns: 2;
+      column-gap: 44px;
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .not-included-list li {
+      margin-bottom: 12px;
+      break-inside: avoid;
+    }
+
+    /* IMPORTANT DATES */
+    .dates-section {
+      background: linear-gradient(135deg, var(--navy) 0%, #23529a 100%);
+      border-radius: var(--radius-lg);
+      color: var(--white);
+      padding: 30px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .dates-section h2 {
+      color: var(--white);
+      font-size: clamp(2rem, 3vw, 2.6rem);
+      margin-bottom: 8px;
+    }
+
+    .dates-section p {
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 20px;
+    }
+
+    .payment-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .payment-card {
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 12px;
+      padding: 18px;
+      background: rgba(255,255,255,0.05);
+    }
+
+    .payment-card .eyebrow {
+      color: var(--gold-light);
+      margin-bottom: 8px;
+    }
+
+    .payment-card h3 {
+      color: white;
+      font-size: 1.7rem;
+      margin-bottom: 6px;
+    }
+
+    .payment-card p {
+      margin: 0;
+      color: rgba(255,255,255,0.88);
+      font-size: 0.96rem;
+    }
+
+    /* RESPONSE / FORM */
+    .response-section {
+      padding-top: 46px;
+    }
+
+    .response-heading {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .response-heading h2 {
+      font-size: clamp(2rem, 3vw, 2.9rem);
+      margin-bottom: 10px;
+    }
+
+    .response-heading p {
+      color: var(--muted);
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .response-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--card-shadow);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .response-form {
+      margin-top: 6px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 0.96rem;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font: inherit;
+      color: var(--text);
+      background: #fffdfa;
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .selection-box {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+      background: #fffdfa;
+    }
+
+    .selection-box h3 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+    }
+
+    .radio-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .radio-option {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      background: white;
+    }
+
+    .radio-option input[type="radio"] {
+      width: auto;
+      margin-top: 4px;
+      accent-color: var(--navy);
+    }
+
+    .radio-option strong {
+      display: block;
+      color: var(--navy);
+      margin-bottom: 2px;
+    }
+
+    .radio-option span {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .submit-row {
+      margin-top: 22px;
+      text-align: center;
+    }
+
+    .submit-btn {
+      appearance: none;
+      border: 0;
+      background: linear-gradient(135deg, var(--navy) 0%, #23529a 100%);
+      color: white;
+      padding: 14px 26px;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 10px 24px rgba(23, 55, 96, 0.16);
+    }
+
+    .submit-note {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    /* DISCLAIMER + FOOTER */
+    .disclaimer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      max-width: 980px;
+      margin: 24px auto 0;
+    }
+
+    .site-footer {
+      border-top: 1px solid var(--border);
+      margin-top: 34px;
+      padding: 22px 0 36px;
+      text-align: center;
+    }
+
+    .site-footer p {
+      margin: 0 0 6px;
+      color: var(--gold);
+      font-family: Georgia, "Times New Roman", serif;
+      font-style: italic;
+      font-size: 1.5rem;
+    }
+
+    .site-footer a {
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 980px) {
+      .quote-header-inner,
+      .overview-grid,
+      .gallery-grid,
+      .fare-grid,
+      .fare-details-grid,
+      .payment-grid,
+      .split-overview {
+        grid-template-columns: 1fr;
+      }
+
+      .quote-header-inner {
+        gap: 22px;
+      }
+
+      .header-divider {
+        display: none;
+      }
+
+      .quote-logo-wrap {
+        justify-content: flex-start;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .not-included-list {
+        columns: 1;
+      }
+
+      .gallery-card img {
+        height: 260px;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .quote-header {
+        padding: 30px 0;
+      }
+
+      .intro-card-inner,
+      .split-card,
+      .fare-card,
+      .detail-card,
+      .response-card,
+      .not-included-box,
+      .dates-section {
+        padding: 22px;
+      }
+
+      .trip-subtitle {
+        font-size: 1.25rem;
+      }
+
+      .trip-meta {
+        font-size: 1rem;
+      }
+
+      .gallery-card img {
+        height: 220px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<header class="quote-header">
-  <div class="container quote-header-inner">
+  <header class="quote-header">
+    <div class="container quote-header-inner">
+      <div class="quote-logo-wrap">
+        <img
+          class="quote-logo"
+          src="https://passports-postcards.github.io/passports-postcards-travel/pp-logo-white.png"
+          alt="Passports & Postcards Travel Design"
+        />
+      </div>
 
-    <div class="quote-logo-wrap">
-      <img
-        class="quote-logo"
-        src="https://passports-postcards.github.io/passports-postcards-travel/pp-logo-white.png"
-        alt="Passports & Postcards Travel Design">
+      <div class="header-divider"></div>
 
-      <div class="advisor-info">
-        <strong>Prepared by Pam Brock</strong>
-        Travel Advisor<br>
+      <div class="header-copy">
+        <div class="eyebrow">Your Personalized Cruise Quote</div>
+        <h1>Alaska Denali Explorer</h1>
+        <div class="trip-subtitle">12-Day Princess CruiseTour</div>
+        <div class="trip-meta">Island Princess &nbsp;&bull;&nbsp; August 18–30, 2027</div>
 
-        <a href="mailto:Pam@postcardstraveldesign.com">
-          Pam@postcardstraveldesign.com
-        </a><br>
-
-        <a href="tel:+17573927188">
+        <div class="advisor-chip">
+          <strong>Prepared by:</strong> Pam Brock / Travel Advisor<br />
+          Pam@postcardstraveldesign.com<br />
           (757) 392-7188
-        </a>
+        </div>
       </div>
     </div>
+  </header>
 
-    <div class="header-divider"></div>
+  <section class="intro-card">
+    <div class="container">
+      <div class="intro-card-inner">
+        <div class="eyebrow">Cruise + Land Adventure</div>
+        <h2>Alaska by sea and land</h2>
+        <p>
+          Experience Alaska’s spectacular coastline, glaciers, and wilderness on a journey
+          combining a seven-night Princess cruise with a five-night land adventure through
+          Mt. McKinley, Denali, and Fairbanks.
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <div class="quote-title">
-      <div class="quote-label">
-        Your Personalized Cruise Quote
+  <section class="section">
+    <div class="container">
+      <div class="overview-heading">
+        <h2>Trip Overview</h2>
+        <p>Your Alaska CruiseTour at a glance</p>
       </div>
 
-      <h1>Alaska Denali Explorer</h1>
+      <div class="overview-grid">
+        <div class="overview-card">
+          <h3>12 Days</h3>
+          <p>Cruise + Land</p>
+        </div>
+        <div class="overview-card">
+          <h3>Island Princess</h3>
+          <p>Princess Cruises</p>
+        </div>
+        <div class="overview-card">
+          <h3>Premium Oceanview</h3>
+          <p>Category O6</p>
+        </div>
+        <div class="overview-card">
+          <h3>2 Travelers</h3>
+          <p>Quoted Together</p>
+        </div>
+      </div>
 
-      <h2>12-Day Princess CruiseTour</h2>
+      <div class="journey-banner">
+        <div class="eyebrow">Your Journey</div>
+        <div class="journey-route">
+          Vancouver → Ketchikan → Juneau → Skagway → Glacier Bay → College Fjord → Whittier → Mt. McKinley → Denali → Fairbanks
+        </div>
+        <p>
+          Cruise Alaska’s Inside Passage and glaciers before traveling farther into Alaska’s
+          interior aboard your Princess CruiseTour.
+        </p>
+      </div>
+    </div>
+  </section>
 
-      <p>
-        Island Princess &nbsp;•&nbsp; August 18–30, 2027
+  <section class="section gallery-section">
+    <div class="container">
+      <div class="eyebrow center">Destination Highlights</div>
+      <h2>See what makes this trip unforgettable</h2>
+      <p class="section-subtitle">
+        A few of the beautiful stops and landscapes you can look forward to on this Alaska adventure.
       </p>
+
+      <div class="gallery-grid">
+        <div class="gallery-card">
+          <img src="images/Ketchikan.jpg" alt="Ketchikan, Alaska" />
+          <div class="gallery-card-body">
+            <h3>Ketchikan</h3>
+            <p>Colorful waterfront charm, rich Native culture, and classic Inside Passage scenery.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <img src="images/Juneau.jpg" alt="Juneau, Alaska" />
+          <div class="gallery-card-body">
+            <h3>Juneau</h3>
+            <p>Home to dramatic mountain views, wildlife excursions, and the famous Mendenhall Glacier.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <img src="images/Skagway.jpg" alt="Skagway, Alaska" />
+          <div class="gallery-card-body">
+            <h3>Skagway</h3>
+            <p>Gold Rush history, scenic rail journeys, and unforgettable mountain landscapes.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <img src="images/glacierBay.jpg" alt="Glacier Bay National Park, Alaska" />
+          <div class="gallery-card-body">
+            <h3>Glacier Bay</h3>
+            <p>Scenic cruising among towering glaciers, icy blue waters, and incredible wilderness views.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <img src="images/Denali.jpg" alt="Denali, Alaska" />
+          <div class="gallery-card-body">
+            <h3>Denali</h3>
+            <p>Big landscapes, rugged beauty, and the chance to experience Alaska beyond the cruise ports.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <img src="images/Fairbanks.png" alt="Fairbanks, Alaska" />
+          <div class="gallery-card-body">
+            <h3>Fairbanks</h3>
+            <p>Alaska’s interior hub with riverfront charm and the possibility of late-summer northern lights.</p>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-  </div>
-</header>
+  <section class="section">
+    <div class="container">
+      <div class="eyebrow center">Cruise + Land Itinerary</div>
+      <h2 class="center" style="font-size: clamp(2rem, 3vw, 2.8rem); margin-bottom: 8px;">Two Adventures in One</h2>
+      <p class="center" style="color: var(--muted); margin-bottom: 0;">
+        Seven nights at sea followed by five nights exploring Alaska by land
+      </p>
 
+      <div class="split-overview">
+        <div class="split-card">
+          <div class="eyebrow">Cruise Portion</div>
+          <h3>7-Night Alaska Cruise</h3>
+          <div class="route-line">Vancouver to Whittier</div>
+          <ul>
+            <li>Ketchikan</li>
+            <li>Juneau</li>
+            <li>Skagway</li>
+            <li>Scenic cruising in Glacier Bay National Park</li>
+            <li>Scenic cruising through College Fjord</li>
+            <li>Meals in included onboard dining venues</li>
+            <li>Entertainment and onboard activities</li>
+          </ul>
+        </div>
 
-<main>
-<div class="container">
-
-<div class="intro">
-  <div class="eyebrow">Cruise + Land Adventure</div>
-
-  <h2>Alaska by sea and land</h2>
-
-  <p>
-    Experience Alaska's spectacular coastline, glaciers and wilderness
-    on a journey combining a seven-night Princess cruise with a
-    five-night land adventure through Mt. McKinley, Denali and Fairbanks.
-  </p>
-</div>
-
-
-<section>
-  <div class="section-title">
-    <h2>Trip Overview</h2>
-    <p>Your Alaska CruiseTour at a glance</p>
-  </div>
-
-  <div class="trip-overview">
-
-    <div class="overview-box">
-      <strong>12 Days</strong>
-      <span>Cruise + Land</span>
+        <div class="split-card">
+          <div class="eyebrow">Land Portion</div>
+          <h3>5-Night Alaska Land Tour</h3>
+          <div class="route-line">Whittier to Fairbanks</div>
+          <ul>
+            <li>Princess wilderness lodge accommodations</li>
+            <li>Mt. McKinley area</li>
+            <li>Denali National Park area</li>
+            <li>Fairbanks</li>
+            <li>Transportation included with the CruiseTour itinerary</li>
+            <li>Time to experience Alaska beyond the cruise ports</li>
+          </ul>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="overview-box">
-      <strong>Island Princess</strong>
-      <span>Princess Cruises</span>
-    </div>
-
-    <div class="overview-box">
-      <strong>Premium Oceanview</strong>
-      <span>Category O6</span>
-    </div>
-
-    <div class="overview-box">
-      <strong>2 Travelers</strong>
-      <span>Quoted Together</span>
-    </div>
-
-  </div>
-</section>
-
-
-<section>
-  <div class="route-card">
-
-    <div class="eyebrow">
-      Your Journey
-    </div>
-
-    <div class="route-line">
-      Vancouver → Ketchikan → Juneau → Skagway →
-      Glacier Bay → College Fjord → Whittier →
-      Mt. McKinley → Denali → Fairbanks
-    </div>
-
-    <p>
-      Cruise Alaska's Inside Passage and glaciers before traveling
-      farther into Alaska's interior aboard your Princess CruiseTour.
-    </p>
-
-  </div>
-</section>
-
-
-<section>
-  <div class="section-title">
-    <h2>Two Adventures in One</h2>
-
-    <p>
-      Seven nights at sea followed by five nights exploring Alaska by land
-    </p>
-  </div>
-
-  <div class="two-column">
-
-    <div class="trip-card">
-      <div class="eyebrow">Cruise Portion</div>
-
-      <h3>7-Night Alaska Cruise</h3>
-
-      <div class="subhead">
-        Vancouver to Whittier
+  <section class="section">
+    <div class="container">
+      <div class="pricing-heading">
+        <div class="eyebrow center">Choose Your Fare</div>
+        <h2>Three ways to package your vacation</h2>
+        <p>Same ship, cabin, and CruiseTour — three options based on the experience you want.</p>
       </div>
 
-      <ul>
-        <li>Ketchikan</li>
-        <li>Juneau</li>
-        <li>Skagway</li>
-        <li>Scenic cruising in Glacier Bay National Park</li>
-        <li>Scenic cruising through College Fjord</li>
-        <li>Meals in included onboard dining venues</li>
-        <li>Entertainment and onboard activities</li>
-      </ul>
-    </div>
+      <div class="fare-grid">
+        <div class="fare-card">
+          <h3>Princess Standard</h3>
+          <p class="fare-desc">CruiseTour with Princess Standard fare</p>
+          <div class="fare-price">$4,704</div>
+        </div>
 
-    <div class="trip-card">
-      <div class="eyebrow">Land Portion</div>
+        <div class="fare-card featured">
+          <h3>Princess Plus</h3>
+          <p class="fare-desc">Standard benefits plus added onboard inclusions</p>
+          <div class="fare-price">$5,614</div>
+        </div>
 
-      <h3>5-Night Alaska Land Tour</h3>
-
-      <div class="subhead">
-        Whittier to Fairbanks
+        <div class="fare-card premier">
+          <h3>Princess Premier</h3>
+          <p class="fare-desc">The most inclusive Princess fare option</p>
+          <div class="fare-price">$6,084</div>
+        </div>
       </div>
 
-      <ul>
-        <li>Princess wilderness lodge accommodations</li>
-        <li>Mt. McKinley area</li>
-        <li>Denali National Park area</li>
-        <li>Fairbanks</li>
-        <li>Transportation included with the CruiseTour itinerary</li>
-        <li>Time to experience Alaska beyond the cruise ports</li>
-      </ul>
-    </div>
-
-  </div>
-</section>
-
-
-<section>
-  <div class="section-title">
-    <h2>Choose Your Fare</h2>
-
-    <p>
-      Same ship, cabin and CruiseTour — three ways to package your vacation
-    </p>
-  </div>
-
-  <div class="fare-grid">
-
-    <article class="fare-card">
-      <div class="fare-top">
-
-        <div class="fare-name">
-          Princess Standard
+      <div class="fare-details-grid">
+        <div class="detail-card">
+          <h3>Princess Standard</h3>
+          <ul>
+            <li>7-night Island Princess cruise</li>
+            <li>Premium Oceanview O6 stateroom</li>
+            <li>5-night Alaska land tour</li>
+            <li>Princess wilderness lodge accommodations</li>
+            <li>CruiseTour transportation</li>
+            <li>Included onboard dining</li>
+            <li>Onboard entertainment and activities</li>
+            <li>Applicable cruise taxes and port expenses</li>
+          </ul>
         </div>
 
-        <div class="fare-description">
-          CruiseTour with Princess Standard fare
+        <div class="detail-card">
+          <h3>Princess Plus</h3>
+          <ul>
+            <li>Everything in Standard, plus:</li>
+            <li>Plus Beverage Package</li>
+            <li>Wi-Fi for one device per guest</li>
+            <li>Crew appreciation during the cruise</li>
+            <li>4 casual dining meals per guest</li>
+            <li>OceanNow delivery access</li>
+            <li>Room service delivery included</li>
+          </ul>
+
+          <div class="value-list">
+            <h4>Plus Value for Two</h4>
+            <div class="value-line"><span>Crew Appreciation</span><strong>$252.00</strong></div>
+            <div class="value-line"><span>Wi-Fi</span><strong>Approx. $349.86</strong></div>
+            <div class="value-line"><span>8 Casual Dining Meals</span><strong>$119.92</strong></div>
+            <div class="value-line"><span>OceanNow Access</span><strong>$29.98</strong></div>
+            <div class="value-line"><span>Room Service Delivery</span><strong>$5/order included</strong></div>
+            <div class="value-line"><span>Plus Beverage Package</span><strong>Included</strong></div>
+          </div>
+
+          <p class="small-note">
+            Plus costs $910 more than Standard. Identifiable value before beverages is approximately
+            $751.76, leaving about $158.24 of the upgrade to be offset by beverages and drink package use.
+          </p>
         </div>
 
-        <div class="price">
-          $4,704
-        </div>
+        <div class="detail-card">
+          <h3>Princess Premier</h3>
+          <ul>
+            <li>Everything in Plus, with Premier upgrades</li>
+            <li>Premier Beverage Package with higher drink limit</li>
+            <li>Wi-Fi for up to 4 devices per guest</li>
+            <li>Unlimited casual dining</li>
+            <li>Unlimited specialty dining</li>
+            <li>Shore excursion credit</li>
+            <li>Unlimited digital photos + 3 prints</li>
+            <li>Reserved theater seating</li>
+          </ul>
 
-        <div class="price-note">
-          total for two travelers
-        </div>
+          <div class="value-list">
+            <h4>Premier Additional Value</h4>
+            <div class="value-line"><span>Shore Excursion Credit</span><strong>$200 total</strong></div>
+            <div class="value-line"><span>Casual Dining</span><strong>Unlimited</strong></div>
+            <div class="value-line"><span>Specialty Dining</span><strong>Unlimited</strong></div>
+            <div class="value-line"><span>Wi-Fi</span><strong>Up to 4 devices each</strong></div>
+            <div class="value-line"><span>Professional Photos</span><strong>Digital + 3 prints</strong></div>
+            <div class="value-line"><span>Reserved Theater Seating</span><strong>Included</strong></div>
+            <div class="value-line"><span>Premier Beverage Package</span><strong>Drinks up to $20</strong></div>
+          </div>
 
+          <p class="small-note">
+            Premier costs only $470 more than Plus for two travelers, while adding the shore excursion
+            credit, upgraded Wi-Fi, specialty dining, photos, reserved seating, and higher-level drink package.
+          </p>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <div class="fare-body">
-        <h4>Includes</h4>
-
-        <ul>
-          <li>7-night Island Princess cruise</li>
-          <li>Premium Oceanview O6 stateroom</li>
-          <li>5-night Alaska land tour</li>
-          <li>Princess wilderness lodge accommodations</li>
-          <li>CruiseTour transportation</li>
-          <li>Included onboard dining</li>
-          <li>Onboard entertainment and activities</li>
-          <li>Applicable cruise taxes and port expenses</li>
+  <section class="section">
+    <div class="container">
+      <div class="not-included-box">
+        <h2>Not Included With Any Fare</h2>
+        <ul class="not-included-list">
+          <li>Airfare</li>
+          <li>Vacation protection / travel insurance</li>
+          <li>Optional shore excursions</li>
+          <li>Optional land-tour excursions</li>
+          <li>Most meals during the land-tour portion</li>
+          <li>Land-tour gratuities</li>
+          <li>Personal expenses</li>
         </ul>
       </div>
-    </article>
-
-
-    <article class="fare-card plus">
-
-      <div class="fare-top">
-
-        <div class="fare-name">
-          Princess Plus
-        </div>
-
-        <div class="fare-description">
-          Standard benefits plus added onboard inclusions
-        </div>
-
-        <div class="price">
-          $5,614
-        </div>
-
-        <div class="price-note">
-          total for two travelers
-        </div>
-
-      </div>
-
-      <div class="fare-body">
-
-        <h4>
-          Everything in Standard, plus
-        </h4>
-
-        <ul>
-          <li>Plus Beverage Package</li>
-          <li>Wi-Fi for one device per guest</li>
-          <li>Crew appreciation during the cruise</li>
-          <li>4 casual dining meals per guest</li>
-          <li>OceanNow delivery access</li>
-          <li>Room service delivery included</li>
-        </ul>
-
-        <div class="value-box">
-
-          <div class="value-heading">
-            Plus Value for Two
-          </div>
-
-          <div class="value-row">
-            <span>Crew Appreciation</span>
-            <span>$252.00</span>
-          </div>
-
-          <div class="value-row">
-            <span>Wi-Fi</span>
-            <span>Approx. $349.86</span>
-          </div>
-
-          <div class="value-row">
-            <span>8 Casual Dining Meals</span>
-            <span>$119.92</span>
-          </div>
-
-          <div class="value-row">
-            <span>OceanNow Access</span>
-            <span>$29.98</span>
-          </div>
-
-          <div class="value-row">
-            <span>Room Service Delivery</span>
-            <span>$5/order included</span>
-          </div>
-
-          <div class="value-row">
-            <span>Plus Beverage Package</span>
-            <span>Included</span>
-          </div>
-
-          <div class="value-summary">
-            Plus costs <strong>$910 more</strong> than Standard.
-
-            <br><br>
-
-            Identifiable included value before beverages:
-            <strong>approximately $751.76</strong>.
-
-            <br><br>
-
-            That leaves approximately
-            <strong>$158.24</strong>
-            of the upgrade to be offset by specialty coffees,
-            bottled water, energy drinks, mocktails,
-            alcoholic beverages and room-service delivery.
-          </div>
-
-        </div>
-
-      </div>
-    </article>
-
-
-    <article class="fare-card premier">
-
-      <div class="fare-top">
-
-        <div class="fare-name">
-          Princess Premier
-        </div>
-
-        <div class="fare-description">
-          The most inclusive Princess fare option
-        </div>
-
-        <div class="price">
-          $6,084
-        </div>
-
-        <div class="price-note">
-          total for two travelers
-        </div>
-
-      </div>
-
-      <div class="fare-body">
-
-        <h4>
-          Everything in Plus, with Premier upgrades
-        </h4>
-
-        <ul>
-          <li>Premier Beverage Package with higher drink limit</li>
-          <li>Wi-Fi for up to 4 devices per guest</li>
-          <li>Unlimited casual dining</li>
-          <li>Unlimited specialty dining</li>
-          <li>Shore excursion credit</li>
-          <li>Unlimited digital photos + 3 prints</li>
-          <li>Reserved theater seating</li>
-        </ul>
-
-        <div class="value-box">
-
-          <div class="value-heading">
-            Premier Additional Value
-          </div>
-
-          <div class="value-row">
-            <span>Shore Excursion Credit</span>
-            <span>$200 total</span>
-          </div>
-
-          <div class="value-row">
-            <span>Casual Dining</span>
-            <span>Unlimited</span>
-          </div>
-
-          <div class="value-row">
-            <span>Specialty Dining</span>
-            <span>Unlimited</span>
-          </div>
-
-          <div class="value-row">
-            <span>Wi-Fi</span>
-            <span>Up to 4 devices each</span>
-          </div>
-
-          <div class="value-row">
-            <span>Professional Photos</span>
-            <span>Digital + 3 prints</span>
-          </div>
-
-          <div class="value-row">
-            <span>Reserved Theater Seating</span>
-            <span>Included</span>
-          </div>
-
-          <div class="value-row">
-            <span>Premier Beverage Package</span>
-            <span>Drinks up to $20</span>
-          </div>
-
-          <div class="premier-extra">
-            Premier costs only
-            <strong>$470 more than Plus</strong>
-            for two travelers.
-
-            <br><br>
-
-            That additional amount adds the shore excursion credit,
-            unlimited specialty and casual dining, upgraded Wi-Fi,
-            professional photos, reserved theater seating and the
-            higher-level Premier Beverage Package.
-          </div>
-
-        </div>
-
-      </div>
-    </article>
-
-  </div>
-</section>
-
-
-<section>
-  <div class="not-included">
-
-    <h3>
-      Not Included With Any Fare
-    </h3>
-
-    <ul>
-      <li>Airfare</li>
-      <li>Vacation protection / travel insurance</li>
-      <li>Optional shore excursions</li>
-      <li>Optional land-tour excursions</li>
-      <li>Most meals during the land-tour portion</li>
-      <li>Land-tour gratuities</li>
-      <li>Personal expenses</li>
-    </ul>
-
-  </div>
-</section>
-
-
-<section>
-  <div class="payment">
-
-    <h2>
-      Pricing & Important Dates
-    </h2>
-
-    <p>
-      Pricing is based on current availability and is subject to
-      change until the reservation and required deposit are confirmed.
-    </p>
-
-    <div class="payment-grid">
-
-      <div class="payment-item">
-        <span>Deposit</span>
-        <strong>$250</strong>
-        <small class="payment-note">
-          Due September 21, 2026
-        </small>
-      </div>
-
-      <div class="payment-item">
-        <span>Final Payment</span>
-        <strong>April 20, 2027</strong>
-      </div>
-
-      <div class="payment-item">
-        <span>Travel Dates</span>
-        <strong>Aug. 18–30, 2027</strong>
-      </div>
-
     </div>
+  </section>
 
-  </div>
-</section>
+  <section class="section" style="padding-top: 10px;">
+    <div class="container">
+      <div class="dates-section">
+        <h2>Pricing & Important Dates</h2>
+        <p>
+          Pricing is based on current availability and is subject to change until the reservation and
+          required deposit are confirmed.
+        </p>
 
+        <div class="payment-grid">
+          <div class="payment-card">
+            <div class="eyebrow">Deposit</div>
+            <h3>$250</h3>
+            <p>Due by September 21, 2026</p>
+          </div>
 
-<section class="response-section">
+          <div class="payment-card">
+            <div class="eyebrow">Final Payment</div>
+            <h3>April 20, 2027</h3>
+            <p>Full balance due to confirm travel</p>
+          </div>
 
-  <div class="eyebrow">
-    Your Response
-  </div>
-
-  <h2>
-    Ready to move forward or have a question?
-  </h2>
-
-  <p class="response-intro">
-    Enter your name below. You may select an option if you are ready to move forward,
-    or simply send me a question before deciding.
-  </p>
-
-  <form
-    class="response-form"
-    action="https://submit-form.com/NkK6KqEND"
-    method="POST">
-
-    <input
-      type="hidden"
-      name="trip"
-      value="Alaska Denali Explorer">
-
-    <input
-      type="hidden"
-      name="ship"
-      value="Island Princess">
-
-    <input
-      type="hidden"
-      name="travel_dates"
-      value="August 18-30, 2027">
-
-    <input
-      type="hidden"
-      name="_email.subject"
-      value="New Proposal Response - Alaska Denali Explorer">
-
-    <div class="name-field">
-      <label for="client-name">
-        Your Name
-      </label>
-
-      <input
-        type="text"
-        id="client-name"
-        name="client_name"
-        placeholder="Enter your name"
-        required>
+          <div class="payment-card">
+            <div class="eyebrow">Travel Dates</div>
+            <h3>Aug. 18–30, 2027</h3>
+            <p>12 days / 11 nights</p>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
+  <section class="section response-section">
+    <div class="container">
+      <div class="response-heading">
+        <div class="eyebrow">Your Next Adventure</div>
+        <h2>Ready for Alaska?</h2>
+        <p>
+          When you're ready to move forward, you can select an option below or send me your questions first.
+          I’ll confirm current pricing and availability before anything is booked.
+        </p>
+      </div>
 
-    <div class="selection-options">
+      <div class="response-card">
+        <form class="response-form" action="https://submit-form.com/NkK6KqEND" method="POST">
+          <input type="hidden" name="proposal_name" value="Alaska Denali Explorer">
+          <input type="hidden" name="proposal_type" value="Cruise Proposal">
+          <input type="hidden" name="advisor_name" value="Pam Brock">
+          <input type="hidden" name="advisor_email" value="Pam@postcardstraveldesign.com">
 
-      <label class="selection-card">
-        <input
-          type="radio"
-          name="selection"
-          value="Princess Standard - $4,704">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="client-name">Your Name *</label>
+              <input type="text" id="client-name" name="client_name" placeholder="Enter your name" required>
+            </div>
 
-        <span class="selection-content">
-          <strong>Princess Standard</strong>
-          <span>$4,704 total for two travelers</span>
-        </span>
-      </label>
+            <div class="form-group">
+              <label for="client-email">Email Address *</label>
+              <input type="email" id="client-email" name="client_email" placeholder="Enter your email" required>
+            </div>
 
+            <div class="form-group full">
+              <label for="client-phone">Phone Number</label>
+              <input type="tel" id="client-phone" name="client_phone" placeholder="Optional">
+            </div>
 
-      <label class="selection-card">
-        <input
-          type="radio"
-          name="selection"
-          value="Princess Plus - $5,614">
+            <div class="form-group full">
+              <div class="selection-box">
+                <h3>Select an option if you're ready</h3>
+                <div class="radio-list">
+                  <label class="radio-option">
+                    <input type="radio" name="selection" value="Princess Standard - $4,704">
+                    <span>
+                      <strong>Princess Standard — $4,704</strong>
+                      Standard fare for this CruiseTour
+                    </span>
+                  </label>
 
-        <span class="selection-content">
-          <strong>Princess Plus</strong>
-          <span>$5,614 total for two travelers</span>
-        </span>
-      </label>
+                  <label class="radio-option">
+                    <input type="radio" name="selection" value="Princess Plus - $5,614">
+                    <span>
+                      <strong>Princess Plus — $5,614</strong>
+                      Added value including drinks, Wi-Fi, gratuities, and more
+                    </span>
+                  </label>
 
+                  <label class="radio-option">
+                    <input type="radio" name="selection" value="Princess Premier - $6,084">
+                    <span>
+                      <strong>Princess Premier — $6,084</strong>
+                      The most inclusive option with higher-level benefits
+                    </span>
+                  </label>
 
-      <label class="selection-card">
-        <input
-          type="radio"
-          name="selection"
-          value="Princess Premier - $6,084">
+                  <label class="radio-option">
+                    <input type="radio" name="selection" value="I have questions before deciding">
+                    <span>
+                      <strong>I have questions before deciding</strong>
+                      Use the notes box below and I’ll follow up with you
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </div>
 
-        <span class="selection-content">
-          <strong>Princess Premier</strong>
-          <span>$6,084 total for two travelers</span>
-        </span>
-      </label>
+            <div class="form-group full">
+              <label for="client-notes">Questions or Notes</label>
+              <textarea
+                id="client-notes"
+                name="questions_or_notes"
+                placeholder="Ask questions, let me know which option you prefer, or share any notes here."
+              ></textarea>
+            </div>
+          </div>
 
+          <div class="submit-row">
+            <button class="submit-btn" type="submit">Send My Response</button>
+            <div class="submit-note">
+              Your response will be sent directly to Pam Brock.
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <p class="disclaimer">
+        This proposal is provided for planning purposes only and does not constitute a confirmed reservation.
+        Pricing, promotions, cabin availability, package inclusions, taxes, fees, and supplier terms are
+        subject to change until booked and deposited. Package benefits are subject to Princess Cruises’
+        current terms and conditions.
+      </p>
+
+      <footer class="site-footer">
+        <p>Turning plans into postcards.</p>
+        <a href="https://postcardstraveldesign.com" target="_blank" rel="noopener">
+          postcardstraveldesign.com
+        </a>
+      </footer>
     </div>
-
-
-    <div class="question-box">
-
-      <label for="questions">
-        Questions or comments?
-      </label>
-
-      <textarea
-        id="questions"
-        name="questions"
-        rows="4"
-        placeholder="Optional"></textarea>
-
-    </div>
-
-
-    <button
-      class="submit-button"
-      type="submit">
-      SUBMIT RESPONSE
-    </button>
-
-  </form>
-
-
-  <div class="disclaimer">
-    Selecting an option does not confirm a reservation.
-    Current availability and pricing will be verified before booking.
-  </div>
-
-</section>
-
-</div>
-</main>
-
-
-<footer>
-
-  <div class="footer-tagline">
-    Turning plans into postcards.
-  </div>
-
-  <a href="https://postcardstraveldesign.com">
-    postcardstraveldesign.com
-  </a>
-
-</footer>
+  </section>
 
 </body>
 </html>
